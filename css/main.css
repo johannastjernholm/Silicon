@@ -139,3 +139,40 @@ header .container {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+/* Tablet view */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .btn-toggle-switch .label {
+    display: block;
+    font-weight: 600;
+  }
+  header .container {
+    grid-template-columns: 1fr auto 0.3fr;
+    gap: 3rem;
+  }
+}
+/* Desktop view */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+    span {
+      color: var(--color-gray-700);
+    }
+  }
+
+  header .container {
+    grid-template-columns: auto 1fr auto auto;
+  }
+  .navbar {
+    display: block;
+  }
+
+  #auth-signin {
+    display: block;
+  }
+  .btn-mobile {
+    display: none;
+  }
+}
