@@ -174,9 +174,6 @@ header .container {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-#brands {
-  display: none;
-}
 .brand-box {
   display: flex;
   justify-content: center;
@@ -185,8 +182,13 @@ header .container {
   border-radius: 8px;
   height: 100px;
   width: 196px;
+  margin-top: 2rem;
+  padding: 0 6rem;
 }
 
+#brands {
+  display: none;
+}
 /* Tablet view */
 @media (min-width: 768px) {
   .container {
@@ -206,8 +208,8 @@ header .container {
   }
   #brands {
     display: block;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
     .container {
       display: flex;
@@ -216,6 +218,7 @@ header .container {
 
       .brand-box {
         width: 158px;
+        padding: 0 0;
       }
     }
   }
@@ -266,17 +269,25 @@ main .hero {
 
   .container {
     display: grid;
-    gap: 3rem;
+    gap: 2.3rem;
     grid-template-columns: 1fr;
     grid-template-areas:
       "headline"
       "content";
+    overflow: hidden;
 
     @media (min-width: 768px) {
       grid-template-columns: 1fr 1fr;
       grid-template-areas:
         "headline headline"
         "content images";
+    }
+    @media (min-width: 1400px) {
+      grid-template-columns: 2fr 3fr;
+      grid-template-areas:
+        "headline images"
+        "content images";
+      padding-top: 8rem;
     }
   }
 
@@ -290,8 +301,11 @@ main .hero {
 
       @media (min-width: 768px) {
         font-size: 44px;
-        /* padding-top: 1rem; */
         padding-bottom: 3rem;
+      }
+      @media (min-width: 1400px) {
+        text-align: left;
+        padding-bottom: 0;
       }
     }
   }
@@ -326,7 +340,10 @@ main .hero {
 
       @media (min-width: 768px) {
         justify-content: flex-start;
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
+      }
+      @media (min-width: 1400px) {
+        margin-top: 12rem;
       }
     }
   }
@@ -342,9 +359,14 @@ main .hero {
       position: absolute;
       z-index: -10;
       bottom: 0;
-      right: 100px;
+      right: 130px;
       width: 70%;
       height: auto;
+
+      @media (min-width: 1400px) {
+        width: 49%;
+        right: 230px;
+      }
     }
     .img-front {
       position: absolute;
@@ -353,6 +375,9 @@ main .hero {
       right: 0;
       width: 70%;
       height: auto;
+      @media (min-width: 1400px) {
+        width: 50%;
+      }
     }
   }
 }
