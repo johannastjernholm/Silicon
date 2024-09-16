@@ -11,6 +11,7 @@
   --color-gray-700: #565973;
   --color-gray-800: #33354d;
   --color-gray-900: #0b0f19;
+  --color-gradient: linear-gradient(to right, #6366f1, #8b5cf6, #d946ef);
   --container-padding: 1rem;
   --transition-time: all 0.2s;
 }
@@ -82,6 +83,8 @@ a:hover {
   background-color: transparent;
   border: none;
   font-size: 2rem;
+  display: flex;
+  justify-content: flex-end;
 }
 .btn-toggle-switch {
   display: flex;
@@ -159,6 +162,9 @@ a:hover {
 #auth-signin {
   display: none;
 }
+#brands {
+  display: none;
+}
 header .container {
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -183,6 +189,25 @@ header .container {
 
   .label {
     color: var(--color-gray-700);
+  }
+  #brands {
+    display: block;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .brand-box {
+        width: 158px;
+      }
+    }
+  }
+  #brand-5,
+  #brand-6 {
+    display: none;
   }
 }
 /* Desktop view */
@@ -210,6 +235,10 @@ header .container {
   .btn-mobile {
     display: none;
   }
+  #brand-5,
+  #brand-6 {
+    display: flex;
+  }
 }
 
 .hero {
@@ -219,6 +248,7 @@ header .container {
 
   .container {
   }
+
   .headline {
     text-align: center;
 
