@@ -248,6 +248,9 @@ header .container {
       background-color: var(--color-gray-100);
       border-radius: 8px;
     }
+    .icon:hover {
+      background-color: var(--color-gray-300);
+    }
     .card-text {
       display: flex;
       flex-direction: column;
@@ -256,6 +259,9 @@ header .container {
         grid-area: headline;
         font-size: 20px;
         font-weight: 900;
+      }
+      h5:hover {
+        text-decoration: underline;
       }
       p {
         grid-area: p;
