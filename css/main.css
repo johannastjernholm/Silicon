@@ -227,10 +227,13 @@ footer .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+    .brand-box {
+      width: 158px;
+      padding: 0 80px;
 
-      .brand-box {
-        width: 158px;
-        padding: 0 0;
+      @media (min-width: 1400px) {
+        padding: 0 100px;
       }
     }
   }
