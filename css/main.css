@@ -189,6 +189,18 @@ header .container {
 #brands {
   display: none;
 }
+
+footer .container {
+  color: var(--color-gray-500);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 /* Tablet view */
 @media (min-width: 768px) {
   .container {
@@ -225,6 +237,11 @@ header .container {
   #brand-5,
   #brand-6 {
     display: none;
+  }
+
+  footer .container {
+    flex-direction: row;
+    gap: 0.2rem;
   }
 }
 /* Desktop view */
