@@ -279,6 +279,50 @@ header .container {
   }
 }
 
+#how-does-it-work .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+  }
+  #my-budget {
+    display: none;
+  }
+  #your-cards {
+    display: none;
+  }
+  #transfer {
+    display: none;
+  }
+  #transfer-mobile {
+    display: block;
+    margin: auto;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .h4-mobile {
+    text-align: center;
+    justify-self: center;
+    font-size: 22px;
+    width: 290px;
+  }
+  .h4-tablet {
+    display: none;
+  }
+  p {
+    text-align: center;
+    padding-top: 1rem;
+    width: 390px;
+  }
+}
+
 footer .container {
   color: var(--color-gray-500);
   font-size: 14px;
@@ -286,8 +330,8 @@ footer .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* Tablet view */
