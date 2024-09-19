@@ -203,9 +203,9 @@ header .container {
   .feature-image {
     grid-area: feature-image;
     display: none;
+    width: 348px;
     @media (min-width: 1400px) {
       display: block;
-      width: 20rem;
       margin-right: 10rem;
     }
   }
@@ -283,24 +283,58 @@ header .container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
   h1 {
     font-size: 28px;
     font-weight: 800;
     text-align: center;
   }
-  #my-budget {
-    display: none;
+  .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* id for images */
+    #my-budget-desktop {
+      display: none;
+    }
+    #your-cards-tablet {
+      display: none;
+    }
+    #transfer-right-tablet {
+      display: none;
+    }
+    #transfer-mobile {
+      display: block;
+      width: 270px;
+    }
+    @media (min-width: 768px) {
+      display: flex;
+      flex-direction: row;
+      #your-cards-tablet {
+        display: block;
+      }
+      #transfer-mobile {
+        width: 200px;
+      }
+      #transfer-right-tablet {
+        display: block;
+      }
+    }
+    @media (min-width: 1400px) {
+      gap: 4rem;
+      #your-cards-tablet {
+        width: 300px;
+      }
+      #transfer-mobile {
+        width: 300px;
+      }
+      #transfer-right-tablet {
+        width: 300px;
+      }
+    }
   }
-  #your-cards {
-    display: none;
-  }
-  #transfer {
-    display: none;
-  }
-  #transfer-mobile {
-    display: block;
-    margin: auto;
-  }
+
   .content {
     display: flex;
     flex-direction: column;
@@ -312,9 +346,30 @@ header .container {
     justify-self: center;
     font-size: 22px;
     width: 290px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
   .h4-tablet {
     display: none;
+    @media (min-width: 768px) {
+      display: block;
+      text-align: center;
+      justify-self: center;
+      font-size: 22px;
+      width: 390px;
+    }
+    @media (min-width: 1400px) {
+      display: none;
+    }
+  }
+  .h4-desktop {
+    display: none;
+    font-size: 24px;
+    @media (min-width: 1400px) {
+      display: block;
+    }
   }
   p {
     text-align: center;
