@@ -372,6 +372,7 @@ header .container {
     }
   }
   p {
+    color: var(--color-gray-600);
     text-align: center;
     padding-top: 1rem;
     width: 390px;
