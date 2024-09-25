@@ -322,6 +322,7 @@ header .container {
       }
     }
     @media (min-width: 1400px) {
+      justify-content: space-evenly;
       gap: 4rem;
       #your-cards-tablet {
         width: 300px;
