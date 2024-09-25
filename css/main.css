@@ -209,6 +209,7 @@ header .container {
   flex-direction: column;
   margin-top: 3rem;
   gap: 2rem;
+  max-width: 1296px;
 
   .feature-image {
     grid-area: feature-image;
@@ -285,6 +286,7 @@ header .container {
   gap: 2rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  max-width: 1184px;
   h1 {
     font-size: 28px;
     font-weight: 800;
@@ -471,7 +473,8 @@ footer .container {
   #features-desktop {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
+    max-width: 1076px;
+    row-gap: 5rem;
     .btn-primary {
       width: fit-content;
       margin-top: 1.5rem;
