@@ -475,6 +475,7 @@ footer .container {
     grid-template-columns: 1fr 1fr;
     max-width: 1076px;
     row-gap: 5rem;
+    margin-bottom: 8rem;
     .btn-primary {
       width: fit-content;
       margin-top: 1.5rem;
@@ -576,6 +577,20 @@ footer .container {
         margin-top: 4rem;
       }
     }
+  }
+
+  .client-reviews {
+    max-width: 1296px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
+  div {
+    width: 416px;
+  }
+
+  .user-info {
+    display: ;
   }
 }
 
