@@ -204,7 +204,94 @@ header .container {
 .icon:hover {
   background-color: var(--color-gray-300);
 }
+/* NEW */
 #app-features .container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 2rem;
+
+  .feature-image {
+    grid-area: feature-image;
+    display: none;
+    @media (min-width: 1400px) {
+      display: block;
+      width: 20rem;
+      margin-right: 10rem;
+    }
+  }
+  .app-feature-text {
+    grid-area: app-feature-text;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    h1 {
+      font-size: 32px;
+      font-weight: 1000;
+    }
+    p {
+      font-size: 18px;
+      color: var(--color-gray-700);
+    }
+    @media (min-width: 1400px) {
+      text-align: left;
+    }
+  }
+  .card-container {
+    grid-area: card-container;
+    .card {
+      display: grid;
+      grid-template-areas:
+        "icon headline"
+        "icon p";
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .icon {
+      grid-area: icon;
+      padding: 1rem;
+      background-color: var(--color-gray-100);
+      border-radius: 8px;
+    }
+    .icon:hover {
+      background-color: var(--color-gray-300);
+    }
+    .card-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      h5 {
+        grid-area: headline;
+        font-size: 20px;
+        font-weight: 900;
+      }
+      h5:hover {
+        text-decoration: underline;
+      }
+      p {
+        grid-area: p;
+        font-size: 18px;
+        color: var(--color-gray-700);
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "feature-image app-feature-text app-feature-text"
+      "feature-image card-container card-container";
+  }
+}
+
+/* OLD */
+/* #app-features .container {
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
@@ -278,7 +365,7 @@ header .container {
       "feature-image app-feature-text app-feature-text"
       "feature-image card-container card-container";
   }
-}
+} */
 
 #how-does-it-work .container {
   display: flex;
@@ -381,6 +468,12 @@ header .container {
     width: 390px;
   }
 }
+#features-desktop {
+  display: none;
+}
+.client-reviews {
+  display: none;
+}
 
 footer .container {
   color: var(--color-gray-500);
@@ -433,9 +526,7 @@ footer .container {
   #brand-6 {
     display: none;
   }
-  #features-desktop {
-    display: none;
-  }
+
   footer .container {
     flex-direction: row;
     gap: 0.2rem;
@@ -583,17 +674,63 @@ footer .container {
     max-width: 1296px;
     display: flex;
     margin: auto;
-    margin-bottom: 5rem;
-  }
-  div {
-    width: 416px;
-  }
 
-  .user-info {
-    display: ;
+    justify-content: center;
+    margin-bottom: 5rem;
+    gap: 2rem;
+
+    h2 {
+      font-size: 40px;
+      font-weight: 900;
+    }
+
+    .left {
+      width: 350px;
+      margin-right: 5rem;
+    }
+
+    .middle,
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px var(--color-gray-300);
+      padding: var(--container-padding);
+      position: relative;
+      width: 416px;
+    }
+    .square-quote {
+      position: absolute;
+      top: -25px;
+      left: 18px;
+      box-shadow: 0px 2px 10px rgba(56, 56, 56, 0.404);
+      border-radius: 6px;
+    }
+
+    .img-stars {
+      padding-top: 1rem;
+      width: 20%;
+    }
+    .review-content {
+      color: var(--color-gray-700);
+      font-size: 18px;
+    }
+    .user-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .user-name {
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+    .user-role {
+      color: var(--color-gray-600);
+    }
   }
 }
-
 main .hero {
   background: rgb(99, 102, 241);
   background: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
