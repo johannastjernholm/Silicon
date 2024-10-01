@@ -659,13 +659,16 @@ footer .container {
   }
   #faq-section {
     max-width: 1296px;
-    display: flex;
-    align-items: center;
     margin: auto;
+    display: grid;
+    grid-template-areas:
+      "faq faq accordion accordion accordion"
+      "faq faq accordion accordion accordion";
     gap: 5rem;
   }
   .faq-container {
-    width: 40%;
+    grid-area: faq;
+    /* width: 40%; */
     /* margin: auto; */
     /* gap: 5rem; */
     /* align-items: center; */
@@ -732,43 +735,45 @@ footer .container {
   }
 
   .accordion-container {
-    width: 60%;
+    grid-area: accordion;
+    /* width: 100%; */
   }
   /* Style the buttons that are used to open and close the accordion panel */
   .accordion {
-    background-color: #eee;
-    color: #444;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    color: var(--color-gray-900);
     cursor: pointer;
-    padding: 18px;
+    padding: 30px;
     width: 100%;
     border: none;
     text-align: left;
-    outline: none;
-    font-size: 15px;
+    /* outline: auto; */
+    font-size: 16px;
+    font-weight: bold;
     transition: 0.4s;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.192);
+    margin-bottom: 0.5rem;
   }
 
   .active,
   .accordion:hover {
-    background-color: #ccc;
-  }
-
-  .panel {
-    padding: 0 18px;
-    display: none;
-    background-color: white;
-    overflow: hidden;
+    text-decoration: none;
   }
   .accordion:after {
     content: "\02795"; /* Unicode character for "plus" sign (+) */
     font-size: 13px;
-    color: #777;
     float: right;
     margin-left: 5px;
   }
-
   .active:after {
     content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+  .panel {
+    padding: 20px 22px;
+    display: none;
+    overflow: hidden;
   }
 }
 
