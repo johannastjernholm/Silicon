@@ -657,15 +657,20 @@ footer .container {
       font-size: 14px;
     }
   }
-
-  .faq-container {
+  #faq-section {
     max-width: 1296px;
     display: flex;
+    align-items: center;
     margin: auto;
     gap: 5rem;
   }
+  .faq-container {
+    width: 40%;
+    /* margin: auto; */
+    /* gap: 5rem; */
+    /* align-items: center; */
+  }
   .contact-container {
-    width: 35%;
     display: grid;
     grid-template-areas:
       "headline headline"
@@ -676,12 +681,22 @@ footer .container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    h2 {
+      font-weight: 900;
+      font-size: 32px;
+    }
+    p {
+      font-size: 18px;
+    }
   }
   .phone-box,
   .chat-box {
     border: 1px solid var(--color-gray-300);
     border-radius: 8px;
-    padding: 1rem;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    display: grid;
+    gap: 1.5rem;
     img {
       cursor: pointer;
     }
@@ -717,7 +732,7 @@ footer .container {
   }
 
   .accordion-container {
-    width: 65%;
+    width: 60%;
   }
   /* Style the buttons that are used to open and close the accordion panel */
   .accordion {
