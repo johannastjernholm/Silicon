@@ -661,119 +661,163 @@ footer .container {
     max-width: 1296px;
     margin: auto;
     display: grid;
-    grid-template-areas:
-      "faq faq accordion accordion accordion"
-      "faq faq accordion accordion accordion";
+    grid-template-areas: "faq faq accordion  accordion";
     gap: 5rem;
-  }
-  .faq-container {
-    grid-area: faq;
-    /* width: 40%; */
-    /* margin: auto; */
-    /* gap: 5rem; */
-    /* align-items: center; */
-  }
-  .contact-container {
-    display: grid;
-    grid-template-areas:
-      "headline headline"
-      "first-box second-box";
-  }
-  .text-box {
-    grid-area: headline;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    h2 {
-      font-weight: 900;
-      font-size: 32px;
+
+    .faq-container {
+      grid-area: faq;
     }
-    p {
-      font-size: 18px;
+    .contact-container {
+      display: grid;
+      grid-template-areas:
+        "headline headline"
+        "first-box second-box";
     }
-  }
-  .phone-box,
-  .chat-box {
-    border: 1px solid var(--color-gray-300);
-    border-radius: 8px;
-    padding: 1.2rem;
-    margin-top: 2rem;
-    display: grid;
-    gap: 1.5rem;
-    img {
+    .text-box {
+      grid-area: headline;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      h2 {
+        font-weight: 900;
+        font-size: 32px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+    .phone-box,
+    .chat-box {
+      border: 1px solid var(--color-gray-300);
+      border-radius: 8px;
+      padding: 1.2rem;
+      margin-top: 2rem;
+      display: grid;
+      gap: 1.5rem;
+      img {
+        cursor: pointer;
+      }
+    }
+    .phone-box {
+      grid-area: first-box;
+      display: grid;
+      margin-right: 1rem;
+    }
+    .chat-box {
+      grid-area: second-box;
+      display: grid;
+    }
+    .green {
+      color: #22c55e;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .green:hover {
+      color: #22c55e;
+      text-decoration: underline;
+    }
+    .blue {
+      color: var(--color-primary);
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .blue:hover {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
+
+    .accordion-container {
+      grid-area: accordion;
+      /* width: 100%; */
+    }
+    /* Style the buttons that are used to open and close the accordion panel */
+    .accordion {
+      background-color: var(--color-white);
+      border-radius: 8px;
+      color: var(--color-gray-900);
       cursor: pointer;
+      padding: 30px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      /* outline: auto; */
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.4s;
+      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.192);
+      margin-bottom: 0.5rem;
     }
-  }
-  .phone-box {
-    grid-area: first-box;
-    display: grid;
-    margin-right: 1rem;
-  }
-  .chat-box {
-    grid-area: second-box;
-    display: grid;
-  }
-  .green {
-    color: #22c55e;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-  .green:hover {
-    color: #22c55e;
-    text-decoration: underline;
-  }
-  .blue {
-    color: var(--color-primary);
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-  .blue:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
-  }
 
-  .accordion-container {
-    grid-area: accordion;
-    /* width: 100%; */
+    .active,
+    .accordion:hover {
+      text-decoration: none;
+    }
+    .accordion:after {
+      content: "\02795"; /* Unicode character for "plus" sign (+) */
+      font-size: 13px;
+      float: right;
+      margin-left: 5px;
+    }
+    .active:after {
+      content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+
+    .panel {
+      padding: 20px 22px;
+      display: none;
+      /* overflow: hidden; */
+    }
+    /* @media (min-width: 768px) {
+      grid-template-areas:
+        "headline"
+        "accordion";
+    } */
   }
-  /* Style the buttons that are used to open and close the accordion panel */
-  .accordion {
-    background-color: var(--color-white);
-    border-radius: 8px;
-    color: var(--color-gray-900);
-    cursor: pointer;
-    padding: 30px;
-    width: 100%;
+  #newsletter-section {
+    max-width: 1296px;
+    margin: auto;
+    margin-top: 10rem;
+  }
+  .newsletter-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-left: 3rem;
+  }
+  .subscribe {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+  h4 {
+    font-size: 24px;
+    max-width: 28rem;
+  }
+  .input {
+    display: flex;
+    position: relative;
+  }
+  .letter-img {
+    position: absolute;
+    left: 5%;
+    top: 35%;
+  }
+  .input-box {
+    padding-left: 2.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 8px 0 0 8px;
+    border: 1px solid #b4b7c9;
+    color: #b4b7c9;
+    outline: none;
+  }
+  .btn-subscribe {
     border: none;
-    text-align: left;
-    /* outline: auto; */
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.4s;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.192);
-    margin-bottom: 0.5rem;
-  }
-
-  .active,
-  .accordion:hover {
-    text-decoration: none;
-  }
-  .accordion:after {
-    content: "\02795"; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    float: right;
-    margin-left: 5px;
-  }
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
-
-  .panel {
-    padding: 20px 22px;
-    display: none;
-    overflow: hidden;
+    border-radius: 0 8px 8px 0;
   }
 }
 
