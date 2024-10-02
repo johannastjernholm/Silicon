@@ -289,18 +289,22 @@ header .container {
       "feature-image card-container card-container";
   }
 }
-
+#how-does-it-work {
+  background-color: var(--color-gray-100);
+  margin-top: 4rem;
+}
 #how-does-it-work .container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 5rem;
   max-width: 1184px;
   h1 {
     font-size: 28px;
     font-weight: 800;
     text-align: center;
+    margin-bottom: 2rem;
   }
   .image-container {
     display: flex;
@@ -594,13 +598,15 @@ footer .container {
   }
 
   .client-reviews {
-    max-width: 1296px;
+    background-color: var(--color-gray-100);
+    /* max-width: 1296px; */
     display: flex;
-    margin: auto;
-
     justify-content: center;
-    margin-bottom: 5rem;
     gap: 2rem;
+    margin: auto;
+    margin-bottom: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
     h2 {
       font-size: 40px;
@@ -776,9 +782,11 @@ footer .container {
     } */
   }
   #newsletter-section {
+    background-color: var(--color-gray-100);
     max-width: 1296px;
     margin: auto;
     margin-top: 10rem;
+    padding: 4rem;
   }
   .newsletter-container {
     display: flex;
