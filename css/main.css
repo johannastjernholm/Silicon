@@ -805,7 +805,7 @@ footer .container {
     top: 35%;
   }
   .input-box {
-    padding-left: 2.5rem;
+    padding-left: 3rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
     display: flex;
@@ -814,6 +814,7 @@ footer .container {
     border: 1px solid #b4b7c9;
     color: #b4b7c9;
     outline: none;
+    width: 300px;
   }
   .btn-subscribe {
     border: none;
