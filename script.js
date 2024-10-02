@@ -1,14 +1,20 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
+// Skapad med ChatGPT
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+document.querySelectorAll(".accordion-button").forEach((button) => {
+  button.addEventListener("click", () => {
+    const accordionContent = button.nextElementSibling;
+    const icon = button.querySelector(".icon-accordion i");
+
+    button.classList.toggle("active");
+
+    if (button.classList.contains("active")) {
+      icon.classList.remove("fa-chevron-down");
+      icon.classList.add("fa-chevron-up");
+      accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
     } else {
-      panel.style.display = "block";
+      icon.classList.remove("fa-chevron-up");
+      icon.classList.add("fa-chevron-down");
+      accordionContent.style.maxHeight = 0;
     }
   });
-}
+});

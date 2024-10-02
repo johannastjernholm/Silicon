@@ -734,53 +734,62 @@ footer .container {
       color: var(--color-primary);
       text-decoration: underline;
     }
-
     .accordion-container {
-      grid-area: accordion;
-      /* width: 100%; */
-    }
-    /* Style the buttons that are used to open and close the accordion panel */
-    .accordion {
-      background-color: var(--color-white);
-      border-radius: 8px;
-      color: var(--color-gray-900);
-      cursor: pointer;
-      padding: 30px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      /* outline: auto; */
-      font-size: 16px;
-      font-weight: bold;
-      transition: 0.4s;
-      box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.192);
-      margin-bottom: 0.5rem;
+      /* max-width: 600px; */
+      /* margin: 0 auto; */
     }
 
-    .active,
-    .accordion:hover {
+    .accordion-item {
+      background-color: white;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .accordion-button {
+      width: 100%;
+      background-color: white;
+      color: #333;
+      padding: 15px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accordion-button.active {
+      background-color: var(--color-white);
       text-decoration: none;
     }
-    .accordion:after {
-      content: "\02795"; /* Unicode character for "plus" sign (+) */
-      font-size: 13px;
-      float: right;
-      margin-left: 5px;
-    }
-    .active:after {
-      content: "\2796"; /* Unicode character for "minus" sign (-) */
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 20px;
+      transition: max-height 0.2s ease;
     }
 
-    .panel {
-      padding: 20px 22px;
-      display: none;
-      /* overflow: hidden; */
+    .accordion-content p {
+      padding: 15px 0;
     }
-    /* @media (min-width: 768px) {
-      grid-template-areas:
-        "headline"
-        "accordion";
-    } */
+
+    .icon-accordion {
+      color: var(--color-white);
+      font-size: 12px;
+      border-radius: 49%;
+      padding: 12px;
+      background-color: var(--color-primary);
+    }
+
+    .icon-accordion i {
+      transition: transform 0.1s ease;
+    }
   }
   #newsletter-section {
     background-color: var(--color-gray-100);
