@@ -310,44 +310,48 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* id for images */
-    #my-budget-desktop {
+
+    img {
       display: none;
     }
-    #your-cards-tablet {
-      display: none;
-    }
-    #transfer-right-tablet {
-      display: none;
-    }
-    #transfer-mobile {
+    #mobile-img {
       display: block;
-      width: 270px;
     }
+
+    /* tablet */
     @media (min-width: 768px) {
-      display: flex;
-      flex-direction: row;
-      #your-cards-tablet {
+      #tablet-your-cards-img {
         display: block;
       }
-      #transfer-mobile {
-        width: 200px;
+      #mobile-img {
+        width: 204px;
       }
-      #transfer-right-tablet {
+      #tablet-transfer-right {
         display: block;
       }
     }
+    /* desktop */
     @media (min-width: 1400px) {
-      justify-content: space-evenly;
-      gap: 4rem;
-      #your-cards-tablet {
-        width: 300px;
+      gap: 5rem;
+
+      #tablet-your-cards-img {
+        display: none;
       }
-      #transfer-mobile {
-        width: 300px;
+      #mobile-img {
+        display: none;
       }
-      #transfer-right-tablet {
-        width: 300px;
+      #tablet-transfer-right {
+        display: none;
+      }
+      #my-budget-desktop {
+        display: block;
+        width: 328px;
+      }
+      #desktop-your-cards {
+        display: block;
+      }
+      #desktop-transfer-right {
+        display: block;
       }
     }
   }
