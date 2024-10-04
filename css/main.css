@@ -416,7 +416,7 @@ footer .container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
   margin-bottom: 2rem;
 }
 
@@ -804,6 +804,7 @@ footer .container {
     margin: auto;
     margin-top: 10rem;
     padding: 4rem;
+    border-radius: 8px;
   }
   .newsletter-container {
     display: flex;
