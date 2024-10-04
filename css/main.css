@@ -744,10 +744,6 @@ footer .container {
       color: var(--color-primary);
       text-decoration: underline;
     }
-    .accordion-container {
-      /* max-width: 600px; */
-      /* margin: 0 auto; */
-    }
 
     .accordion-item {
       background-color: white;
