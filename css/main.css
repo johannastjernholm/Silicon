@@ -204,7 +204,6 @@ header .container {
 .icon:hover {
   background-color: var(--color-gray-300);
 }
-/* NEW */
 #app-features .container {
   display: flex;
   flex-direction: column;
@@ -318,7 +317,7 @@ header .container {
       display: block;
     }
 
-    /* tablet */
+    /* tablet query for image-container */
     @media (min-width: 768px) {
       #tablet-your-cards-img {
         display: block;
@@ -330,7 +329,7 @@ header .container {
         display: block;
       }
     }
-    /* desktop */
+    /* desktop query for image-container */
     @media (min-width: 1400px) {
       gap: 5rem;
 
@@ -399,10 +398,14 @@ header .container {
     width: 390px;
   }
 }
+
 #features-desktop {
   display: none;
 }
 .client-reviews {
+  display: none;
+}
+#faq-section {
   display: none;
 }
 
@@ -461,6 +464,9 @@ footer .container {
   footer .container {
     flex-direction: row;
     gap: 0.2rem;
+  }
+  #newsletter-section {
+    display: none;
   }
 }
 /* Desktop view */
@@ -796,6 +802,7 @@ footer .container {
     }
   }
   #newsletter-section {
+    display: block;
     background-color: var(--color-gray-100);
     max-width: 1296px;
     margin: auto;
